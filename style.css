@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Courier New', monospace;
+  font-family: 'EB Garamond', serif;
   background-color: #fdfaf6;
 
   /* Horizontal ruled lines */
@@ -29,14 +29,17 @@ body {
   height: auto;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid black; /* ← add this line */
 }
 
 .text-column {
   flex: 0 0 70%;
+  height: 100vh; /* Occupy full height */
+  overflow: hidden; /* Hide overflow from parent */
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
+
 
 h1 {
   font-size: 2.5rem;
@@ -47,6 +50,8 @@ p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
+
+
 
 @media (max-width: 768px) {
   .hero {
@@ -63,3 +68,82 @@ p {
     margin-bottom: 2rem;
   }
 }
+
+
+.photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #0073e6;
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+
+.section-nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background-color: #fdfaf6;
+  z-index: 10;
+  border-bottom: 1px solid #ddd;
+}
+
+.section-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.section-nav a:hover {
+  color: #0073e6;
+}
+
+.notebook-margin {
+  position: fixed;
+  top: 0;
+  left: 60px; /* how far from the left edge */
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.5); /* light red */
+  z-index: 1;
+  pointer-events: none;
+}
+
