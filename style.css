@@ -3,11 +3,12 @@ body {
   font-family: 'Courier New', monospace;
   background-color: #fdfaf6;
 
-  /* Grid background using SVG */
-  background-image: 
-    linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+  /* Grid background */
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
   background-size: 20px 20px;
+  background-repeat: repeat;
 }
 
 .hero {
